@@ -202,3 +202,92 @@ body{
         gap:15px;
     }
 }
+
+
+
+@media (max-width:768px){
+
+    .todo-container{
+        width:95%;
+        padding:20px;
+        margin:20px auto;
+    }
+
+    .navbar h1{
+        font-size:30px;
+    }
+
+    .todo-form{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .todo-form input{
+        width:100%;
+    }
+
+    .todo-form button{
+        width:100%;
+    }
+
+    .filters{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:10px;
+    }
+
+    .filters button{
+        width:100%;
+        min-width:0;
+        padding:12px;
+        font-size:14px;
+    }
+
+    .todo-item{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:15px;
+    }
+
+    .todo-item p{
+        font-size:16px;
+        word-break:break-word;
+        flex:1;
+    }
+
+    .todo-item div{
+        display:flex;
+        gap:8px;
+        margin-left:10px;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .navbar h1{
+        font-size:24px;
+    }
+
+    .todo-container{
+        padding:15px;
+    }
+
+    .filters{
+        grid-template-columns:1fr;
+    }
+
+    .todo-item{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+
+    .todo-item div{
+        width:100%;
+        justify-content:flex-end;
+    }
+
+}
