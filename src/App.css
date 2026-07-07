@@ -203,19 +203,39 @@ body{
     }
 }
 
+/* ===========================================
+            Responsive Design
+=========================================== */
 
+@media screen and (max-width:768px){
 
-@media (max-width:768px){
+    /* Main Card */
 
     .todo-container{
         width:95%;
-        padding:20px;
         margin:20px auto;
+        padding:20px;
+    }
+
+    /* Navbar */
+
+    .navbar{
+        padding:15px;
     }
 
     .navbar h1{
-        font-size:30px;
+        font-size:24px;
     }
+
+    /* Search */
+
+    .search{
+        width:100%;
+        font-size:15px;
+        padding:14px;
+    }
+
+    /* Add Task */
 
     .todo-form{
         display:flex;
@@ -223,55 +243,61 @@ body{
         gap:15px;
     }
 
-    .todo-form input{
-        width:100%;
-    }
-
+    .todo-form input,
     .todo-form button{
         width:100%;
     }
 
+    /* Filter Buttons */
+
     .filters{
         display:grid;
-        grid-template-columns:repeat(3,1fr);
-        gap:10px;
+        grid-template-columns:1fr 1fr;
+        gap:12px;
     }
 
-    .filters button{
-        width:100%;
-        min-width:0;
-        padding:12px;
-        font-size:14px;
+    .filters button:last-child{
+        grid-column:1 / span 2;
     }
+
+    /* Todo Card */
 
     .todo-item{
         display:flex;
-        justify-content:space-between;
-        align-items:center;
-        padding:15px;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
     }
 
     .todo-item p{
+        width:100%;
         font-size:16px;
         word-break:break-word;
-        flex:1;
     }
 
     .todo-item div{
+        width:100%;
         display:flex;
-        gap:8px;
-        margin-left:10px;
+        justify-content:flex-end;
+        gap:10px;
+    }
+
+    .todo-item button{
+        margin-left:0;
     }
 
 }
 
-@media (max-width:480px){
+/* Small Mobile */
+
+@media screen and (max-width:480px){
 
     .navbar h1{
-        font-size:24px;
+        font-size:20px;
     }
 
     .todo-container{
+        width:95%;
         padding:15px;
     }
 
@@ -279,15 +305,12 @@ body{
         grid-template-columns:1fr;
     }
 
-    .todo-item{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:15px;
+    .filters button:last-child{
+        grid-column:auto;
     }
 
-    .todo-item div{
-        width:100%;
-        justify-content:flex-end;
+    .todo-item{
+        text-align:left;
     }
 
 }
