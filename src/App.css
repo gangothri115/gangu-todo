@@ -268,19 +268,16 @@ body{
         align-items:flex-start;
         gap:15px;
     }
+.todo-item{
+    padding:15px;
+}
 
-    .todo-item p{
-        width:100%;
-        font-size:16px;
-        word-break:break-word;
-    }
-
-    .todo-item div{
-        width:100%;
-        display:flex;
-        justify-content:flex-end;
-        gap:10px;
-    }
+.todo-item div{
+    display:flex;
+    justify-content:flex-end;
+    width:100%;
+    gap:8px;
+}
 
     .todo-item button{
         margin-left:0;
@@ -300,10 +297,17 @@ body{
         width:95%;
         padding:15px;
     }
+.filters{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+}
 
-    .filters{
-        grid-template-columns:1fr;
-    }
+.filters button{
+    flex:1;
+    min-width:90px;
+}
 
     .filters button:last-child{
         grid-column:auto;
